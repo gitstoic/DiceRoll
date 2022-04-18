@@ -10,11 +10,13 @@
         android:id="@+id/btn_roll"
         android:layout_width="94dp"
         android:layout_height="48dp"
-        android:layout_marginTop="436dp"
         android:text="@string/roll"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
 
     <ImageView
         android:id="@+id/diceImage1"
@@ -40,5 +42,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/empty_dice"
         android:contentDescription="@string/todo2" />
+
+    <ImageView
+        android:id="@+id/diceImage3"
+        android:layout_width="141dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="356dp"
+        android:contentDescription="@string/todo3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_roll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/empty_dice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
