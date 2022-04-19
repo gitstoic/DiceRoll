@@ -3,6 +3,7 @@ package com.example.diceroll
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -53,8 +54,21 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6 }
         image3.setImageResource(drawableResource3)
 
+        if (diceRoll == 6 && dice2.roll() == 6 ||
+            diceRoll == 6 && dice3.roll() == 6 ||
+            dice2.roll() == 6 && dice3.roll() == 6
+        ) {
+            Toast.makeText(this, "You Win", Toast.LENGTH_SHORT).show()
+        } else if (diceRoll == 5 && dice2.roll() == 4 ||
+            diceRoll == 4 && dice2.roll() == 5 ||
+            dice2.roll() == 4 && dice3.roll() == 5 ||
+            dice2.roll() == 5 && dice3.roll() == 4 ||
+            dice3.roll() == 4 && diceRoll == 5 ||
+            dice3.roll() == 5 && diceRoll == 4
+        ) {
+            Toast.makeText(this, "You Lose" , Toast.LENGTH_SHORT).show()
 
-
+        }
         }
 
     class Dice(private val sides: Int) {
