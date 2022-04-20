@@ -67,10 +67,11 @@ class MainActivity : AppCompatActivity() {
             //creates toast message that shows “You lose” when at least 2 dice throw a total sum of 9
         } else if (diceRoll + dice2.roll() == 9 ||
             diceRoll + dice3.roll() == 9 ||
-            dice2.roll() + dice3.roll() == 9
+            dice2.roll() + dice3.roll() == 9||
+            diceRoll + dice2.roll() + dice3.roll() == 9
+
         ) {
             Toast.makeText(this, "You Lose", Toast.LENGTH_SHORT).show()
-
         }
     }
 
